@@ -1,0 +1,87 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --key: #1f2937;
+  --key-acc: #f59e0b;
+  --key-op: #2563eb;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(1200px 800px at 10% 10%, #0b1220, var(--bg));
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+}
+
+.calculator {
+  width: min(92vw, 380px);
+  background: linear-gradient(180deg, #0b1324, var(--panel));
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.04);
+  overflow: hidden;
+}
+
+.display {
+  padding: 18px 16px 0;
+}
+
+.display input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-size: 2.4rem;
+  line-height: 1.2;
+  text-align: right;
+  padding: 24px 8px 14px;
+  outline: none;
+}
+
+.display .history {
+  text-align: right;
+  color: var(--muted);
+  font-size: .95rem;
+  min-height: 1.2em;
+  padding: 8px 8px 0;
+  user-select: none;
+}
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 14px;
+  background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0));
+}
+
+button.btn {
+  appearance: none;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 12px;
+  font-size: 1.05rem;
+  color: var(--text);
+  background: linear-gradient(180deg, #1b2432, var(--key));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.05), 0 6px 14px rgba(0,0,0,.3);
+  cursor: pointer;
+  transition: transform .05s ease, filter .15s ease;
+  user-select: none;
+}
+
+button.btn:active { transform: translateY(1px) scale(.995); }
+button.btn:focus-visible { outline: 2px solid #3b82f6; outline-offset: 2px; }
+
+.btn.op { background: linear-gradient(180deg, #203257, #1e3a8a); }
+.btn.eq { background: linear-gradient(180deg, #9a6407, var(--key-acc)); color: #111827; font-weight: 700; }
+.btn.util { color: var(--muted); }
+
+.span-2 { grid-column: span 2; }
+
+

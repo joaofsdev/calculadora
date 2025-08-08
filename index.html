@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <main class="calculator" role="application" aria-label="Calculadora">
+      <section class="display">
+        <div class="history" id="history" aria-live="polite"></div>
+        <input id="display" aria-label="Visor da calculadora" inputmode="decimal" autocomplete="off" readonly value="0" />
+      </section>
+      <section class="keys">
+        <button class="btn util" data-type="limpar">AC</button>
+        <button class="btn util" data-type="apagar">DEL</button>
+        <button class="btn util" data-type="porcento">%</button>
+        <button class="btn op" data-type="operador" data-op="/">÷</button>
+
+        <button class="btn" data-type="numero" data-value="7">7</button>
+        <button class="btn" data-type="numero" data-value="8">8</button>
+        <button class="btn" data-type="numero" data-value="9">9</button>
+        <button class="btn op" data-type="operador" data-op="*">×</button>
+
+        <button class="btn" data-type="numero" data-value="4">4</button>
+        <button class="btn" data-type="numero" data-value="5">5</button>
+        <button class="btn" data-type="numero" data-value="6">6</button>
+        <button class="btn op" data-type="operador" data-op="-">−</button>
+
+        <button class="btn" data-type="numero" data-value="1">1</button>
+        <button class="btn" data-type="numero" data-value="2">2</button>
+        <button class="btn" data-type="numero" data-value="3">3</button>
+        <button class="btn op" data-type="operador" data-op="+">+</button>
+
+        <button class="btn span-2" data-type="numero" data-value="0">0</button>
+        <button class="btn"></button>
+        <button class="btn eq" data-type="igual">=</button>
+      </section>
+    </main>
+
+    <script src="src/script.js" defer></script>
+  </body>
+</html>
+
+
